@@ -10,7 +10,12 @@ export class AuthService{
 
   login(email: string, password: string): Observable<any> {
     // Enviar datos de inicio de sesión a la API
-    return this.http.post('api/login', { email, password });
+    return this.http.post('https://pruebas.midasoft.co:5443/Apis_DLLO/Security/api/SEG', 
+    { "password": password,
+      "companyId": "10",
+      "username": email,
+      "desdeMs": true 
+    });
   }
 
   logout(): Observable<any> {
