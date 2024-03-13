@@ -6,8 +6,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [ ReactiveFormsModule, MatFormFieldModule, MatInputModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -53,5 +51,4 @@ export class LoginComponent {
       );
     }
   }
-
 }

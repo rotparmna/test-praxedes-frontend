@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EpisodeService } from '../../core/episode.service';
-import {MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { EpisodeService } from '../../core/episode.services';
 import { FavoriteService } from '../../core/favorite.service';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @Component({
-  selector: 'app-list-characteres',
-  standalone: true,
-  imports: [MatCardModule,MatTableModule,MatCheckboxModule],
-  templateUrl: './list-characteres.component.html',
-  styleUrl: './list-characteres.component.css'
+  selector: 'app-list-characters',
+  templateUrl: './list-characters.component.html',
+  styleUrl: './list-characters.component.css'
 })
-export class ListCharacteresComponent implements OnInit{
+export class ListCharactersComponent implements OnInit{
   idEpisode: any;
   nameEpisode: string = "";
   urlCharacters: any[] = [];
