@@ -3,12 +3,12 @@ import {EpisodeService} from './../../core/episode.service'
 import {MatPaginator} from '@angular/material/paginator'
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon'; 
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-list-episodes',
   standalone: true,
-  imports: [MatPaginator, MatTableModule, MatIconModule],
+  imports: [MatPaginator, MatTableModule, MatIconModule, RouterModule],
   templateUrl: './list-episodes.component.html',
   styleUrl: './list-episodes.component.css'
 })

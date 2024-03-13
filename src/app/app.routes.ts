@@ -23,7 +23,7 @@ export const routes: Routes = [
         component: ListEpisodesComponent
       },
       {
-        path: 'characteres/:episode',
+        path: 'characters/:episode',
         component: ListCharacteresComponent
       }
 ];
