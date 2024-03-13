@@ -1,4 +1,4 @@
-<h2>Rick and Morty Episodes</h2>
+<h2>List of episodes</h2>
 
 <table mat-table [dataSource]="episodesFilters">
   <ng-container matColumnDef="name">
@@ -9,6 +9,15 @@
   <ng-container matColumnDef="air_date">
     <th mat-header-cell *matHeaderCellDef> Air Date </th>
     <td mat-cell *matCellDef="let episode"> {{ episode.air_date }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="url">
+    <th mat-header-cell *matHeaderCellDef> Episode characters </th>
+    <td mat-cell *matCellDef="let episode">
+      <a mat-icon-button [href]="episode.url" target="_blank">
+        <mat-icon>link</mat-icon>
+      </a>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

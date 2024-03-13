@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {EpisodeService} from './../../core/episode.service'
 import {MatPaginator} from '@angular/material/paginator'
 import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon'; 
+
 
 @Component({
   selector: 'app-list-episodes',
   standalone: true,
-  imports: [MatPaginator, MatTableModule],
+  imports: [MatPaginator, MatTableModule, MatIconModule],
   templateUrl: './list-episodes.component.html',
   styleUrl: './list-episodes.component.css'
 })
@@ -16,7 +18,7 @@ export class ListEpisodesComponent implements OnInit{
   pageIndex: number = 0;
   totalPages: number = 0;
   size = 20;
-  displayedColumns = ['name', 'air_date'];
+  displayedColumns = ['name', 'air_date', 'url'];
   lenght: number = 0;
 
   constructor(private episodeService: EpisodeService) {
